@@ -68,7 +68,26 @@ else {
 	return (generatePassword());
 }
 
+// Create variable for user selected character types.
+var passwordAll = lowerAlphabetGlobal.concat(upperAlphabetGlobal, numericCharactersGlobal, specialCharactersGlobal);
 
+// Function returning random characters to be used for the password
+	function generateRandomCharacters() {
+		return passwordAll[Math.floor(Math.random() * passwordAll.length)]
+}
+
+// For loop creating array containing random values to be used in generating the password
+var randomValues = [];
+for (var i = 0; i < passwordLength; i++) {
+    var randomNumberValue = Math.floor(Math.random() * passwordAll.length);
+	randomValues.push(randomNumberValue);
+}
+  
+// For loop generating the random password characters into an array
+var newPasswordValues = [];
+for (var j = 0; j < randomValues.length; j++) {
+	newPasswordValues.push(passwordAll[randomValues[j]]);
+}	
 
 
 
