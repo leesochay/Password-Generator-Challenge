@@ -13,52 +13,63 @@ passwordText.value = password;
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+
+// After clicking Generate Password button, prompt for password length. 
 function generatePassword() {
-    var passwordLength = prompt("Please enter the number of characters you want for you new password.");
+	var passwordLength = prompt("Please enter the number of characters you want for you new password. It must be between 8 and 128 characters.");
+		window.passwordLengthGlobal = passwordLength;
+		if (passwordLength >= 8 && passwordLength <= 128) {
+				console.log(passwordLength);
 
-if (passwordLength < 8 || passwordLength > 128) {
-	var passwordLength = prompt("It must be between 8 and 128 characters.");
-}	
 
-
+// ask for lowercase letters and add if selected.
 var lowercase = confirm("Would you like lower case letters?");
-
-function generateLowercaseRandomLetter() {
-  const lowerAlphabet = "abcdefghijklmnopqrstuvwxyz"
-  return lowerAlphabet[Math.floor(Math.random() * lowerAlphabet.length)]
-
-}
-console.log(generateLowercaseRandomLetter());
-
+if (lowercase === true) {
+	const lowerAlphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+	window.lowerAlphabetGlobal = lowerAlphabet;
+} else {
+	const lowerAlphabet = [];
+	window.lowerAlphabetGlobal = lowerAlphabet;
+}	
+	
+// ask for uppercase letters and add if selected.
 var uppercase = confirm("Would you like upper case letters?");
+if (uppercase === true) {
+    const upperAlphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+	window.upperAlphabetGlobal = upperAlphabet;
+} else {
+	const upperAlphabet = [];
+	window.upperAlphabetGlobal = upperAlphabet;
+}
 
-function generateUppercaseRandomLetter() {
-    const upperAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    return upperAlphabet[Math.floor(Math.random() * upperAlphabet.length)]
+// ask for numbers and add if selected.
+var numbers = confirm("Would you like to include numbers?");
+if (numbers === true) {
+    const numericCharacters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+	window.numericCharactersGlobal = numericCharacters;
+} else {
+	const numericCharacters = [];
+	window.numericCharactersGlobal = numericCharacters;
+}
 
-   }
+// ask for special characters and add if selected.
+var specialPasswordCharacters = confirm("Would you like special characters?");
+if (specialPasswordCharacters === true) {
+	const specialCharacters = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?", "~"];
+	window.specialCharactersGlobal = specialCharacters;
+} else {
+	const specialCharacters = [];
+	window.specialCharactersGlobal = specialCharacters;
+}
+}
 
-console.log(generateUppercaseRandomLetter());
+// Return to beginning if the number of characters is not between 8 and 128.
+else {
+	return (generatePassword());
+}
 
 
-var specialCharacters = confirm("Would you like to use special characters?");
 
-function generateSpecialCharacters() {
-    const specialPasswordCharacters = "@%+/\'!#$^&()*,-.:;<=>?[]_`{|}~"
-    return specialPasswordCharacters[Math.floor(Math.random() * specialPasswordCharacters.length)]
 
-   }
-
-console.log(generateSpecialCharacters());
-
-var numeric = confirm("Would you like to use numeric characters?");
-
-function generateNumericCharacters() {
-    const numericCharacters = "0123456789"
-    return numericCharacters[Math.floor(Math.random() * numericCharacters.length)]
-
-   }
-
-console.log(generateNumericCharacters());
 
 }
