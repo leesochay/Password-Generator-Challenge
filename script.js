@@ -89,6 +89,9 @@ for (var j = 0; j < randomValues.length; j++) {
 	newPasswordValues.push(passwordAll[randomValues[j]]);
 }	
 
+// Preparing and sending the generated password to the funtion to display on the page.
 
+var newPasswordValuesToWrite = newPasswordValues.join("")
+return newPasswordValuesToWrite;
 
 }
