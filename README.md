@@ -17,6 +17,10 @@ When the prompts are answered, with at least one character type, the password is
 
 By clicking the "Generate Password" button, a series of prompts will walk the user to generating a password of a chosen length and selected character types. Please see the following screenshots as an example.
 
+![Lee Sochay Password Generator Homepage screenshot](assets/Challenge3Home.jpg)
+
+![Lee Sochay Portfolio page screenshot](assets/images/LeeSochayPortfolioScreenshot.jpg)
+
 ![Lee Sochay Portfolio page screenshot](assets/images/LeeSochayPortfolioScreenshot.jpg)
 
 The finished project page can be viewed at [leesochay.github.io/Lee-Sochay-Portfolio](https://leesochay.github.io/Lee-Sochay-Portfolio/).
