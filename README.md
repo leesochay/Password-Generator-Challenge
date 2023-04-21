@@ -19,11 +19,11 @@ By clicking the "Generate Password" button, a series of prompts will walk the us
 
 ![Lee Sochay Password Generator Homepage screenshot](assets/Challenge3Home.jpg)
 
-![Lee Sochay Portfolio page screenshot](assets/images/LeeSochayPortfolioScreenshot.jpg)
+![Lee Sochay Password Generator Prompt screenshot](assets/Challenge3Prompt.jpg)
 
-![Lee Sochay Portfolio page screenshot](assets/images/LeeSochayPortfolioScreenshot.jpg)
+![Lee Sochay Password Generator Password screenshot](assets/Challenge3Password.jpg)
 
-The finished project page can be viewed at [leesochay.github.io/Lee-Sochay-Portfolio](https://leesochay.github.io/Lee-Sochay-Portfolio/).
+The finished project page can be viewed at [leesochay.github.io/Password-Generator-Challenge](https://leesochay.github.io/Password-Generator-Challenge/).
 
 ## License
 
